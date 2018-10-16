@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+.s-flex-fill {
+  flex-grow : 1 !important;
+  flex-shrink: 0 !important;
+  flex-basis: 0 !important;
+}
+

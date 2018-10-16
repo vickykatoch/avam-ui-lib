@@ -1,0 +1,19 @@
+.juil-dg {
+  position: relative;
+
+  .dg-body {
+    overflow: auto;
+    border: 1px solid;
+  }
+
+  .dg-header {
+    height: 50px;
+    background: #696868;
+    flex-shrink: 0;
+  }
+  .dg-footer {
+    height: 50px;
+    background: #696868;
+    flex-shrink: 0;
+  }
+}
