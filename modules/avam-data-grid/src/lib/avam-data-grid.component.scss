@@ -1,16 +1,38 @@
 .juil-dg {
   position: relative;
+  
+
+  .dg-scrollable-wrapper {
+    overflow: auto;
+    
+  }
 
   .dg-body {
     overflow: auto;
     border: 1px solid;
+
   }
 
   .dg-header {
-    height: 50px;
     background: #696868;
     flex-shrink: 0;
+    overflow: hidden;
+
+    .dg-header-row {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .dg-header-col {
+      border-right: 1px solid;
+      display: inline-block;
+      padding: 2px 3px;
+      color: #fff;
+      font-weight: bold;
+    }
+
   }
+
   .dg-footer {
     height: 50px;
     background: #696868;

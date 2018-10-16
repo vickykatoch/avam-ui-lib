@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
+import { Column } from './models/column';
 
 @Component({
   selector: 'lib-AvamDataGrid',
@@ -6,15 +7,22 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/co
   styleUrls: ['./avam-data-grid.component.scss']
 })
 export class AvamDataGridComponent implements OnInit {
-  @ViewChild('gridBody') gridBody : ElementRef;
+  @ViewChild('gridBody') gridBody: ElementRef;
+  @ViewChild('scrollableWrapper') scrollableWrapper: ElementRef;
+  
+  @Input() columns: Column[] = [];
+  isVisible = true;
+  constructor(private elem: ElementRef, private renderer: Renderer2) {
 
-  constructor(private renderer: Renderer2) { }
+  }
 
   ngOnInit() {
-    // const height = this.gridBody.nativeElement['offsetHeight'];
+    
+    console.log(this.elem.nativeElement.offsetWidth);
+    
+
     const parent = this.renderer.parentNode(this.gridBody.nativeElement);
     const height = parent.offsetHeight;
-    // this.renderer.setStyle(parent,'height', `${height}px`);
   }
 
 }
