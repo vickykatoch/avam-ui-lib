@@ -15,5 +15,6 @@ export class AppComponent {
   constructor() {
     this.orders = this.dataBuilder.build(10);
     console.log(this.orders);
+    
   }
 }
